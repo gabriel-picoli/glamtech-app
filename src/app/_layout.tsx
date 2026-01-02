@@ -1,4 +1,4 @@
-import { Stack } from 'expo-router'
+import { Slot, Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 
 import {
@@ -12,6 +12,8 @@ import {
 import { ThemeProvider } from 'styled-components/native'
 
 import theme from '../styles/theme'
+
+import Header from '../components/Layout/Header'
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -28,12 +30,10 @@ export default function Layout() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="dark" />
-      <Stack
-        screenOptions={{
-          headerShown: true,
-          title: 'GlamTech'
-        }}
-      />
+
+      <Header />
+
+      <Slot />
     </ThemeProvider>
   )
 }
