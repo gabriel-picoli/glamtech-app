@@ -14,14 +14,14 @@ export const InputWrapper = styled.View<{ $hasError: boolean; $isFocused: boolea
 
   border-width: 1px;
   border-color: ${({ $hasError, $isFocused, theme }) =>
-    $hasError ? theme.colors.error : $isFocused ? theme.colors.hoverPrimary : theme.colors.primary};
+    $hasError ? theme.colors.error : $isFocused ? theme.colors.primaryHover : theme.colors.primary};
   border-radius: 6px;
 `
 
 export const TextInput = styled.TextInput`
   flex: 1;
   font-size: 16px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.typography.fontFamily.regular};
   color: ${({ theme }) => theme.colors.text.primary};
   padding: 0;
 `

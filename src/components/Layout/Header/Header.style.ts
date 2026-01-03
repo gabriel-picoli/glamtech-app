@@ -26,12 +26,12 @@ export const IconContainer = styled.TouchableOpacity`
 
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.text.primary};
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.typography.fontFamily.regular};
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 18px;
 `
 
 export const BoldText = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.bold};
+  font-family: ${({ theme }) => theme.typography.fontFamily.bold};
 `
