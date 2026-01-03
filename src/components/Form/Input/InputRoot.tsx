@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import { InputRootProps } from './Input.types'
+
 import { InputContext } from './InputContext'
+
+import { InputRootProps } from './Input.types'
+
 import { Container } from './Input.styles'
 
 export function InputRoot({ children }: InputRootProps) {

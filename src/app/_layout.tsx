@@ -13,9 +13,7 @@ import { ThemeProvider } from 'styled-components/native'
 
 import theme from '../styles/theme'
 
-import Header from '../components/Layout/Header'
-
-export default function Layout() {
+export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
@@ -31,9 +29,10 @@ export default function Layout() {
     <ThemeProvider theme={theme}>
       <StatusBar style="dark" />
 
-      <Header />
-
-      <Slot />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(private)" />
+        <Stack.Screen name="(public)" />
+      </Stack>
     </ThemeProvider>
   )
 }
