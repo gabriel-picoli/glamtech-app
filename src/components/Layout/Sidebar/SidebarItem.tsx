@@ -15,6 +15,8 @@ import {
 
 import theme from '../../../styles/theme'
 
+import { normalizeRoute } from '../../../router/normalizeRoute'
+
 import Icon from '../../Icon'
 
 const { colors } = theme
@@ -29,7 +31,10 @@ export function SidebarItem({ icon, label, href, badge }: SidebarItemProps) {
 
   const { close } = useSidebarContext()
 
-  const isActive = pathname === href
+  const normalizedPathname = normalizeRoute(pathname)
+  const normalizedHref = normalizeRoute(href)
+
+  const isActive = normalizedPathname === normalizedHref
 
   const handlePress = () => {
     router.push(href)

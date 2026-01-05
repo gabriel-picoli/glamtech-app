@@ -64,7 +64,7 @@ export const ItemButton = styled.TouchableOpacity<{ $isActive: boolean }>`
   flex-direction: row;
   align-items: center;
   padding: 12px 20px;
-  background-color: ${({ $isActive, theme }) => ($isActive ? theme.colors.primary : 'transparent')};
+  background-color: ${({ $isActive, theme }) => ($isActive ? theme.colors.surface : 'transparent')};
   border-left-width: 3px;
   border-left-color: ${({ $isActive, theme }) =>
     $isActive ? theme.colors.primary : 'transparent'};
