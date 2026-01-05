@@ -8,11 +8,13 @@ const colors = {
   text: {
     primary: palette.neutral[900],
     secondary: palette.neutral[600],
+    white: palette.neutral[50],
     placeholder: palette.neutral[400]
   },
 
   icon: {
     primary: palette.neutral[900],
+    white: palette.neutral[50],
     secondary: palette.neutral[600]
   },
 
