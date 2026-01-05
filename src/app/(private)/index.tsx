@@ -1,9 +1,5 @@
-import { Text, View } from 'react-native'
+import { Redirect } from 'expo-router'
 
-export default function Home() {
-  return (
-    <View>
-      <Text>GLAMTECH</Text>
-    </View>
-  )
+export default function PrivateIndex() {
+  return <Redirect href="/(private)/appointments" />
 }

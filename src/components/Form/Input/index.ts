@@ -6,7 +6,7 @@ import { InputLeft } from './InputLeft'
 import { InputRight } from './InputRight'
 import { InputHelper } from './InputHelper'
 
-export const Input = {
+const Input = {
   Root: InputRoot,
   Label: InputLabel,
   Field: InputField,
@@ -15,3 +15,5 @@ export const Input = {
   Helper: InputHelper,
   Error: InputError
 }
+
+export default Input

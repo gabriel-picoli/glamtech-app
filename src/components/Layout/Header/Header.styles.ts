@@ -2,13 +2,12 @@ import { StatusBar, Platform } from 'react-native'
 
 import styled from 'styled-components/native'
 
-const statusBarHeight = Platform.OS === 'android' ? (StatusBar.currentHeight ?? 0) : 44
+export const Container = styled.View<{ $topInset: number }>`
+  padding-top: ${({ $topInset }) => `${$topInset + 20}px`};
+  padding-bottom: 10px;
+  height: ${({ $topInset }) => `${$topInset + 56}px`};
 
-export const Container = styled.View`
-  padding-top: ${statusBarHeight}px;
-  height: ${statusBarHeight + 56}px;
-
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.background};
 
   display: flex;
   flex-direction: row;
