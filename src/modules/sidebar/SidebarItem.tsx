@@ -13,11 +13,11 @@ import {
   ItemLabel
 } from './Sidebar.styles'
 
-import theme from '../../../styles/theme'
+import theme from '../../styles/theme'
 
-import { normalizeRoute } from '../../../router/normalizeRoute'
+import { normalizeRoute } from '../../router/normalizeRoute'
 
-import Icon from '../../Icon'
+import Icon from '../../components/Icon'
 
 const { colors } = theme
 

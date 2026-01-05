@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from 'react'
 
 import { Animated, Modal, TouchableWithoutFeedback } from 'react-native'
 
-import { useSidebarContext } from './SidebarContext'
-
 import { SidebarContentProps } from './Sidebar.types'
+
+import { useSidebarContext } from './SidebarContext'
 
 import { Content, ContentWrapper, Overlay } from './Sidebar.styles'
 
-import { useSafeArea } from '../../../hooks/useSafeArea'
+import { useSafeArea } from '../../hooks/useSafeArea'
 
 export function SidebarContent({ children }: SidebarContentProps) {
   const [shouldRender, setShouldRender] = useState(false)
@@ -74,7 +74,7 @@ export function SidebarContent({ children }: SidebarContentProps) {
       <TouchableWithoutFeedback onPress={close}>
         <Overlay style={{ opacity: overlayAnim }} />
       </TouchableWithoutFeedback>
-      
+
       <ContentWrapper $topInset={top} style={{ transform: [{ translateX: slideAnim }] }}>
         <Content>{children}</Content>
       </ContentWrapper>
