@@ -1,14 +1,12 @@
-import { Text } from 'react-native'
+import { BoldText, Container, IconContainer, Title } from './Header.styles'
 
-import { Feather } from '@expo/vector-icons'
-
-import { BoldText, Container, IconContainer, Title } from './Header.style'
+import Icon from '../../Icon'
 
 export default function Header() {
   return (
     <Container>
       <IconContainer onPress={() => {}}>
-        <Feather name="menu" size={24} color="#000" />
+        <Icon name="bars" />
       </IconContainer>
 
       <Title>
@@ -16,7 +14,7 @@ export default function Header() {
       </Title>
 
       <IconContainer onPress={() => {}}>
-        <Feather name="user" size={24} color="#000" />
+        <Icon name="user-circle" />
       </IconContainer>
     </Container>
   )
