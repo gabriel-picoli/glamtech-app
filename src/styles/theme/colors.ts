@@ -3,6 +3,7 @@ import palette from './palette'
 const colors = {
   background: palette.neutral[50],
   surface: palette.neutral[100],
+  border: palette.neutral[200],
 
   text: {
     primary: palette.neutral[900],
