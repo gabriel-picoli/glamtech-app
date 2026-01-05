@@ -11,6 +11,11 @@ const colors = {
     placeholder: palette.neutral[400]
   },
 
+  icon: {
+    primary: palette.neutral[900],
+    secondary: palette.neutral[600]
+  },
+
   primary: palette.primary[400],
   primaryHover: palette.primary[500],
 
