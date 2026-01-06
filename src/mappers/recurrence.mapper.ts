@@ -2,12 +2,12 @@ import { Recurrence } from '@/domain/models/Recurrence'
 
 import { RecurrenceResponse } from '@/dtos/responses/RecurrenceResponse'
 
-/*
-    mapeia os dados que a api retorna e traduz para o formato que o app (domain) entende
+/**
+ * mapeia os dados que a api retorna e traduz para o formato que o dominio (app) entende
 
-    @param recurrence - dados de retorno da api
+ * @param recurrence - dados de retorno da api
 
-    @returns Recurrence - dados que o app entende
+ * @returns Recurrence - dados que o app entende
 */
 export function mapRecurrenceResponseToDomain(recurrence: RecurrenceResponse): Recurrence {
   return {
