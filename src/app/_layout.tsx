@@ -9,9 +9,7 @@ import {
   useFonts
 } from '@expo-google-fonts/inter'
 
-import { ThemeProvider } from 'styled-components/native'
-
-import theme from '../styles/theme'
+import AppProviders from '@/providers/AppProviders'
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -26,13 +24,13 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <AppProviders>
       <StatusBar style="dark" />
 
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(private)" />
         <Stack.Screen name="(public)" />
       </Stack>
-    </ThemeProvider>
+    </AppProviders>
   )
 }
