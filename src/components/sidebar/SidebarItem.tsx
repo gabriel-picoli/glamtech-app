@@ -13,7 +13,7 @@ import {
   ItemLabel
 } from './Sidebar.styles'
 
-import theme from '../../styles/theme'
+import theme from '@styles/theme'
 
 import { normalizeRoute } from '../../router/normalizeRoute'
 

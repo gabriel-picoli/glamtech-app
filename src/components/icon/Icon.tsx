@@ -2,7 +2,7 @@ import { FontAwesome5 } from '@expo/vector-icons'
 
 import { IconProps } from './Icon.types'
 
-import theme from '../../styles/theme'
+import theme from '@styles/theme'
 
 const iconColor = theme.colors.text.primary
 

@@ -5,7 +5,7 @@ import { useInputContext } from './InputContext'
 import { InputFieldsProps } from './Input.types'
 import { InputWrapper, TextInput } from './Input.styles'
 
-import theme from '../../../styles/theme'
+import theme from '@styles/theme'
 
 export function InputField<T extends FieldValues>({
   name,

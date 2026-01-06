@@ -8,7 +8,7 @@ import { useSidebarContext } from './SidebarContext'
 
 import { Content, ContentWrapper, Overlay } from './Sidebar.styles'
 
-import { useSafeArea } from '../../hooks/useSafeArea'
+import { useSafeArea } from '@hooks/useSafeArea'
 
 export function SidebarContent({ children }: SidebarContentProps) {
   const [shouldRender, setShouldRender] = useState(false)

@@ -1,5 +1,6 @@
-import styled from 'styled-components/native'
 import { Animated } from 'react-native'
+
+import styled from 'styled-components/native'
 
 export const Overlay = styled(Animated.View)`
   position: absolute;
