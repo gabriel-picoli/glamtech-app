@@ -8,13 +8,13 @@ import { EventFormModel } from '@/modules/schedule/models/EventFormModel'
 
 import { mapRecurrenceResponseToDomain } from './recurrence.mapper'
 
-/*
-    mapeia os dados do formulario e traduz para o formato que a api entende
+/**
+ * mapeia os dados que a api retorna e traduz para o formato que o dominio (app) entende
 
-    @param form - dados do formulario
+ * @param recurrence - dados de retorno da api
 
-    @returns EventRequest - dados que a api entende
-*/
+ * @returns Recurrence - dados que o dominio entende
+ */
 export function mapFormToCreateEvent(form: EventFormModel): EventRequest {
   return {
     cod_empresa: 1,
@@ -34,12 +34,12 @@ export function mapFormToCreateEvent(form: EventFormModel): EventRequest {
   }
 }
 
-/*
-    mapeia os dados que a api retorna e traduz para o formato que o app (domain) entende
+/** 
+ * mapeia os dados que a api retorna e traduz para o formato que o dominio (app) entende
 
-    @param event - dados de retorno da api
+ * @param event - dados de retorno da api
 
-    @returns Event - dados que o app entende
+ * @returns Event - dados que o dominio entende
 */
 export function mapEventResponseToDomain(event: EventResponse): Event {
   return {
