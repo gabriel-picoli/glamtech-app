@@ -2,7 +2,7 @@ import { BoldText, Container, IconContainer, Title } from './Header.styles'
 
 import { useSidebarContext } from '../sidebar/SidebarContext'
 
-import { useSafeArea } from '../../hooks/useSafeArea'
+import { useSafeArea } from '@hooks/useSafeArea'
 
 import Icon from '../icon'
 
