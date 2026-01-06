@@ -11,7 +11,10 @@ module.exports = function (api) {
             '@': './src',
             '@modules': './src/modules',
             '@components': './src/components',
-            '@utils': './src/utils'
+            '@utils': './src/utils',
+            '@hooks': './src/hooks',
+            '@styles': './src/styles',
+            '@services': './src/services'
           }
         }
       ],
