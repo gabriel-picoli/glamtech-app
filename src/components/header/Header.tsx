@@ -1,6 +1,6 @@
 import { BoldText, Container, IconContainer, Title } from './Header.styles'
 
-import { useSidebarContext } from '../../modules/sidebar/SidebarContext'
+import { useSidebarContext } from '../sidebar/SidebarContext'
 
 import { useSafeArea } from '../../hooks/useSafeArea'
 
