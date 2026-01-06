@@ -4,7 +4,7 @@ import { useSidebarContext } from '../../modules/sidebar/SidebarContext'
 
 import { useSafeArea } from '../../hooks/useSafeArea'
 
-import Icon from '../Icon'
+import Icon from '../icon'
 
 export default function Header() {
   const { toggle } = useSidebarContext()

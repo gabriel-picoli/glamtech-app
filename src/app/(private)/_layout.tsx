@@ -1,7 +1,7 @@
 import { Slot } from 'expo-router'
 
 import Sidebar from '../../modules/sidebar'
-import Header from '../../components/Header'
+import Header from '../../components/header'
 
 export default function PrivateLayout() {
   return (
