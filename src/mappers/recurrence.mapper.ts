@@ -3,7 +3,8 @@ import { Recurrence } from '@/domain/models/Recurrence'
 import { RecurrenceResponse } from '@/dtos/responses/RecurrenceResponse'
 
 /**
- * mapeia os dados que a api retorna e traduz para o formato que o dominio (app) entende
+ * mapeia a resposta da api para o modelo de dominio (Recurrence),
+ * convertendo os nomes dos campos do backend para o padrao do dominio.
 
  * @param recurrence - dados de retorno da api
 
