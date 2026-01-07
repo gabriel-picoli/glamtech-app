@@ -26,7 +26,6 @@ import Icon from '@components/icon'
 /**
  * Transforma eventos do domínio para o formato do react-native-big-calendar
  *
- * Usa "Luxon" para manipulação de datas
  */
 function transformEventsToCalendar(events: Event[]) {
   return events.map((event) => {
