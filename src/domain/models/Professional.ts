@@ -5,14 +5,14 @@ import { Role } from './Role'
 export interface Professional {
   id: number
 
-  professionalName: string
-  scheduleName: string
-  birthday: string
+  professionalName?: string
+  scheduleName?: string
+  birthday?: string
 
-  cpf: string
-  rg: string
-  phone: string
-  email: string
+  cpf?: string
+  rg?: string
+  phone?: string
+  email?: string
 
   role: Role
 
