@@ -4,6 +4,14 @@ import { ProfessionalResponse } from '@/dtos/responses/ProfessionalResponse'
 
 import { mapRoleResponseToDomain } from './role.mapper'
 
+/**
+ * mapeia a resposta da api para o modelo de dominio (Professional)
+ * convertendo os nomes dos campos do backend para o padrao do dominio.
+
+ * @param professional - dados de retorno da api
+
+ * @returns Professional - dados que o dominio entende
+ */
 export function mapProfessionalResponseToDomain(professional: ProfessionalResponse): Professional {
   return {
     id: professional.codProfissional,
