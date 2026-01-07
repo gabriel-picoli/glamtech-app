@@ -1,4 +1,4 @@
-import { BoldText, Container, IconContainer, Title } from './Header.styles'
+import { BoldText, Container, IconContainer, Title } from './styles'
 
 import { useSidebarContext } from '../sidebar/SidebarContext'
 

@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 
 import { Animated, Modal, TouchableWithoutFeedback } from 'react-native'
 
-import { SidebarContentProps } from './Sidebar.types'
+import { SidebarContentProps } from './types'
 
 import { useSidebarContext } from './SidebarContext'
 
-import { Content, ContentWrapper, Overlay } from './Sidebar.styles'
+import { Content, ContentWrapper, Overlay } from './styles'
 
 import { useSafeArea } from '@hooks/useSafeArea'
 

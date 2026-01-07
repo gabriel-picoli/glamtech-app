@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react'
 
 import { SidebarContext } from './SidebarContext'
 
-import { SidebarRootProps } from './Sidebar.types'
+import { SidebarRootProps } from './types'
 
 export function SidebarRoot({ children }: SidebarRootProps) {
   const [isOpen, setIsOpen] = useState(false)

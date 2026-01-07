@@ -1,6 +1,6 @@
-import { SidebarTitleProps } from './Sidebar.types'
+import { SidebarTitleProps } from './types'
 
-import { SectionTitle } from './Sidebar.styles'
+import { SectionTitle } from './styles'
 
 export function SidebarTitle({ children }: SidebarTitleProps) {
   return <SectionTitle>{children}</SectionTitle>

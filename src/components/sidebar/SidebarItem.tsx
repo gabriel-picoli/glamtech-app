@@ -2,7 +2,7 @@ import { usePathname, useRouter } from 'expo-router'
 
 import { useSidebarContext } from './SidebarContext'
 
-import { SidebarItemProps } from './Sidebar.types'
+import { SidebarItemProps } from './types'
 
 import {
   ItemBadge,
@@ -11,7 +11,7 @@ import {
   ItemContent,
   ItemIconContainer,
   ItemLabel
-} from './Sidebar.styles'
+} from './styles'
 
 import theme from '@styles/theme'
 
