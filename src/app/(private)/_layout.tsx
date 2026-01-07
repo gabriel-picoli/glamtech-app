@@ -1,6 +1,6 @@
 import { Slot } from 'expo-router'
 
-import Header from '@components/header'
+import Header from '@components/layout/header'
 
 import Sidebar from '@/components/sidebar'
 

@@ -1,10 +1,10 @@
 import { BoldText, Container, IconContainer, Title } from './styles'
 
-import { useSidebarContext } from '../sidebar/SidebarContext'
+import { useSidebarContext } from '../../sidebar/SidebarContext'
 
 import { useSafeArea } from '@hooks/useSafeArea'
 
-import Icon from '../icon'
+import Icon from '../../icon'
 
 export default function Header() {
   const { toggle } = useSidebarContext()
