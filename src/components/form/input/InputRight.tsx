@@ -1,6 +1,6 @@
-import { InputRightProps } from './Input.types'
+import { InputRightProps } from './types'
 
-import { RightSlot } from './Input.styles'
+import { RightSlot } from './styles'
 
 export function InputRight({ children }: InputRightProps) {
   return <RightSlot>{children}</RightSlot>

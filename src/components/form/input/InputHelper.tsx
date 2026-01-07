@@ -1,6 +1,6 @@
-import { InputHelperProps } from './Input.types'
+import { InputHelperProps } from './types'
 
-import { HelperText } from './Input.styles'
+import { HelperText } from './styles'
 
 export function InputHelper({ children }: InputHelperProps) {
   return <HelperText>{children}</HelperText>

@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import { InputContext } from './InputContext'
 
-import { InputRootProps } from './Input.types'
+import { InputRootProps } from './types'
 
-import { Container } from './Input.styles'
+import { Container } from './styles'
 
 export function InputRoot({ children }: InputRootProps) {
   const [isFocused, setIsFocused] = useState(false)

@@ -1,8 +1,8 @@
-import { SidebarHeaderProps } from './Sidebar.types'
+import { SidebarHeaderProps } from './types'
 
 import { useSafeArea } from '../../hooks/useSafeArea'
 
-import { Header } from './Sidebar.styles'
+import { Header } from './styles'
 
 export function SidebarHeader({ children }: SidebarHeaderProps) {
   const { top } = useSafeArea()

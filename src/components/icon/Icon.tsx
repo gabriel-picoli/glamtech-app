@@ -1,6 +1,6 @@
 import { FontAwesome5 } from '@expo/vector-icons'
 
-import { IconProps } from './Icon.types'
+import { IconProps } from './types'
 
 import theme from '@styles/theme'
 

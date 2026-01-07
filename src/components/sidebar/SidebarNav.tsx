@@ -1,6 +1,6 @@
-import { SidebarNavProps } from './Sidebar.types'
+import { SidebarNavProps } from './types'
 
-import { Nav } from './Sidebar.styles'
+import { Nav } from './styles'
 
 export function SidebarNav({ children }: SidebarNavProps) {
   return <Nav>{children}</Nav>

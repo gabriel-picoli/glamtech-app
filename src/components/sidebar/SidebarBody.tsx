@@ -1,6 +1,6 @@
-import { SidebarBodyProps } from './Sidebar.types'
+import { SidebarBodyProps } from './types'
 
-import { Body } from './Sidebar.styles'
+import { Body } from './styles'
 
 export function SidebarBody({ children }: SidebarBodyProps) {
   return <Body showsVerticalScrollIndicator={false}>{children}</Body>

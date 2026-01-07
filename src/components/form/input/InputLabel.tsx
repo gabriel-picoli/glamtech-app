@@ -1,4 +1,4 @@
-import { InputLabelProps } from './Input.types'
+import { InputLabelProps } from './types'
 
 import { Label } from '../Form.styles'
 

@@ -2,8 +2,8 @@ import { FieldValues, useController } from 'react-hook-form'
 
 import { useInputContext } from './InputContext'
 
-import { InputFieldsProps } from './Input.types'
-import { InputWrapper, TextInput } from './Input.styles'
+import { InputFieldsProps } from './types'
+import { InputWrapper, TextInput } from './styles'
 
 import theme from '@styles/theme'
 
