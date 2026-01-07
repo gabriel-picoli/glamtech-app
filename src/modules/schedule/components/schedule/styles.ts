@@ -6,17 +6,17 @@ export const Container = styled.View`
 `
 
 export const Header = styled.View`
-  padding: 16px;
   background-color: ${({ theme }) => theme.colors.surface};
   border-bottom-width: 1px;
   border-bottom-color: ${({ theme }) => theme.colors.border};
-  gap: 12px;
 `
 
 export const ControlsRow = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 16px;
+  gap: 12px;
 `
 
 export const ModeButtons = styled.View`
@@ -57,6 +57,7 @@ export const DateSelector = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 12px 16px;
 `
 
 export const DateButton = styled.TouchableOpacity`
@@ -64,9 +65,42 @@ export const DateButton = styled.TouchableOpacity`
 `
 
 export const DateText = styled.Text`
-  font-size: 16px;
+  font-size: 18px;
   font-family: ${({ theme }) => theme.typography.fontFamily.semibold};
   color: ${({ theme }) => theme.colors.text.primary};
+`
+
+export const ProfessionalSelector = styled.View`
+  border-bottom-width: 1px;
+  border-bottom-color: ${({ theme }) => theme.colors.border};
+`
+
+export const ProfessionalScrollView = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    gap: 8
+  }
+})``
+
+export const ProfessionalButton = styled.TouchableOpacity<{ $isActive: boolean }>`
+  padding: 10px 16px;
+  border-radius: 20px;
+  background-color: ${({ $isActive, theme }) =>
+    $isActive ? theme.colors.primary : theme.colors.background};
+  border-width: 1px;
+  border-color: ${({ $isActive, theme }) =>
+    $isActive ? theme.colors.primary : theme.colors.border};
+`
+
+export const ProfessionalButtonText = styled.Text<{ $isActive: boolean }>`
+  font-size: 14px;
+  font-family: ${({ $isActive, theme }) =>
+    $isActive ? theme.typography.fontFamily.semibold : theme.typography.fontFamily.regular};
+  color: ${({ $isActive, theme }) =>
+    $isActive ? theme.colors.text.white : theme.colors.text.primary};
 `
 
 export const CalendarContainer = styled.View`
@@ -88,19 +122,24 @@ export const EmptyText = styled.Text`
   margin-top: 12px;
 `
 
+export const LoadingText = styled.Text`
+  font-size: 14px;
+  font-family: ${({ theme }) => theme.typography.fontFamily.regular};
+  color: ${({ theme }) => theme.colors.text.secondary};
+  margin-top: 8px;
+`
+
 export const StatusBadge = styled.View<{ $status: string }>`
   padding: 4px 8px;
   border-radius: 4px;
+  align-self: flex-start;
   background-color: ${({ $status, theme }) => {
-    // Usa as cores do tema baseado no status
     const statusColors: Record<string, string> = {
-      confirmado: theme.status.confirmado,
-      agendado: theme.status.agendado,
-      aguardando: theme.status.aguardando,
-      pago: theme.status.pago,
-      aguardando_confirmacao: theme.status.aguardando_confirmacao,
-      bloqueado: theme.status.bloqueado,
-      cancelado: theme.colors.error
+      CONFIRMADO: theme.status.confirmado,
+      AGENDADO: theme.status.agendado,
+      AGUARDANDO: theme.status.aguardando,
+      PAGO: theme.status.pago,
+      AGUARDANDO_CONFIRMACAO: theme.status.aguardando_confirmacao
     }
     return statusColors[$status] || theme.colors.primary
   }};

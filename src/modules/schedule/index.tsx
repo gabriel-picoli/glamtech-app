@@ -1,18 +1,17 @@
-import { Calendar } from 'react-native-big-calendar'
+import { ScheduleCalendar } from './components/schedule/calendar/ScheduleCalendar'
+import { ScheduleControls } from './components/schedule/header/ScheduleControls'
+import { ScheduleDateSelector } from './components/schedule/header/ScheduleDateSelector'
+import { ScheduleHeader } from './components/schedule/header/ScheduleHeader'
+import { ScheduleProfessionalSelector } from './components/schedule/professionals-selector/ScheduleProfessionalSelector'
+import { ScheduleRoot } from './components/schedule/ScheduleRoot'
 
-const events = [
-  {
-    title: 'Meeting',
-    start: new Date(2026, 0, 5, 10, 0),
-    end: new Date(2026, 0, 5, 10, 30)
-  },
-  {
-    title: 'Coffee break',
-    start: new Date(2026, 0, 5, 15, 45),
-    end: new Date(2026, 0, 5, 16, 30)
-  }
-]
-
-export default function Schedule() {
-  return <Calendar events={events} height={600} />
+const Schedule = {
+  Root: ScheduleRoot,
+  Header: ScheduleHeader,
+  Controls: ScheduleControls,
+  DateSelector: ScheduleDateSelector,
+  ProfessionalSelector: ScheduleProfessionalSelector,
+  Calendar: ScheduleCalendar
 }
+
+export default Schedule
