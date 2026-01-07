@@ -1,6 +1,6 @@
 import { Situation } from '@/domain/enums/Situation'
 
-import { Role } from './RoleResponse'
+import { RoleResponse } from './RoleResponse'
 
 export interface ProfessionalResponse {
   codEmpresa: number
@@ -15,7 +15,7 @@ export interface ProfessionalResponse {
   telefone: string
   email: string
 
-  cargo: Role
+  cargo: RoleResponse
 
   possuiAgenda: 'S' | 'N'
   assistente: 'S' | 'N'
