@@ -4,7 +4,7 @@ import { InputContext } from './InputContext'
 
 import { InputRootProps } from './types'
 
-import { Container } from './styles'
+import { FieldContainer } from '../_shared/FieldContainer'
 
 export function InputRoot({ children }: InputRootProps) {
   const [isFocused, setIsFocused] = useState(false)
@@ -12,7 +12,7 @@ export function InputRoot({ children }: InputRootProps) {
 
   return (
     <InputContext.Provider value={{ hasError, isFocused, setIsFocused, setHasError }}>
-      <Container>{children}</Container>
+      <FieldContainer>{children}</FieldContainer>
     </InputContext.Provider>
   )
 }

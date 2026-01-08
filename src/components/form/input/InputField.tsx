@@ -3,7 +3,9 @@ import { FieldValues, useController } from 'react-hook-form'
 import { useInputContext } from './InputContext'
 
 import { InputFieldsProps } from './types'
-import { InputWrapper, TextInput } from './styles'
+
+import { FieldWrapper } from '../_shared/FieldWrapper'
+import { TextInput } from './styles'
 
 import theme from '@styles/theme'
 
@@ -25,7 +27,7 @@ export function InputField<T extends FieldValues>({
   const hasError = !!error
 
   return (
-    <InputWrapper $hasError={hasError} $isFocused={isFocused}>
+    <FieldWrapper $hasError={hasError} $isFocused={isFocused}>
       <TextInput
         value={value}
         onChangeText={onChange}
@@ -37,6 +39,6 @@ export function InputField<T extends FieldValues>({
         placeholderTextColor={theme.colors.text.placeholder}
         {...props}
       />
-    </InputWrapper>
+    </FieldWrapper>
   )
 }
