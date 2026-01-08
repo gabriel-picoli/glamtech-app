@@ -1,6 +1,6 @@
 import { SidebarHeaderProps } from './types'
 
-import { useSafeArea } from '../../hooks/useSafeArea'
+import { useSafeArea } from '@/hooks/useSafeArea'
 
 import { Header } from './styles'
 

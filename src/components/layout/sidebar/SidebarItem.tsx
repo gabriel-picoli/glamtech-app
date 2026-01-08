@@ -15,9 +15,9 @@ import {
 
 import theme from '@styles/theme'
 
-import { normalizeRoute } from '../../router/normalizeRoute'
+import { normalizeRoute } from '@/router/normalizeRoute' 
 
-import Icon from '../icon'
+import Icon from '@/components/icon' 
 
 const { colors } = theme
 
