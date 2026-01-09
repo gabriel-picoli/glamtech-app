@@ -6,9 +6,8 @@ export const Container = styled.View`
 `
 
 export const Header = styled.View`
-  background-color: ${({ theme }) => theme.colors.surface};
-  border-bottom-width: 1px;
-  border-bottom-color: ${({ theme }) => theme.colors.border};
+  background-color: ${({ theme }) => theme.colors.background};
+  margin-bottom: 15px;
 `
 
 export const ControlsRow = styled.View`
@@ -24,40 +23,12 @@ export const ModeButtons = styled.View`
   gap: 8px;
 `
 
-export const ModeButton = styled.TouchableOpacity<{ $isActive: boolean }>`
-  padding: 8px 16px;
-  border-radius: 6px;
-  background-color: ${({ $isActive, theme }) =>
-    $isActive ? theme.colors.primary : theme.colors.background};
-`
-
-export const ModeButtonText = styled.Text<{ $isActive: boolean }>`
-  font-size: 14px;
-  font-family: ${({ theme }) => theme.typography.fontFamily.medium};
-  color: ${({ $isActive, theme }) =>
-    $isActive ? theme.colors.text.white : theme.colors.text.primary};
-`
-
-export const ActionButton = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.primary};
-  padding: 8px 16px;
-  border-radius: 6px;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-`
-
-export const ActionButtonText = styled.Text`
-  font-size: 14px;
-  font-family: ${({ theme }) => theme.typography.fontFamily.semibold};
-  color: ${({ theme }) => theme.colors.text.white};
-`
-
 export const DateSelector = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 8px 16px;
+  gap: 12px;
 `
 
 export const DateButton = styled.TouchableOpacity`
@@ -70,37 +41,12 @@ export const DateText = styled.Text`
   color: ${({ theme }) => theme.colors.text.primary};
 `
 
-export const ProfessionalSelector = styled.View`
-  border-bottom-width: 1px;
-  border-bottom-color: ${({ theme }) => theme.colors.border};
-`
-
-export const ProfessionalScrollView = styled.ScrollView.attrs({
-  horizontal: true,
-  showsHorizontalScrollIndicator: false,
-  contentContainerStyle: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 8
-  }
-})``
-
-export const ProfessionalButton = styled.TouchableOpacity<{ $isActive: boolean }>`
-  padding: 10px 16px;
-  border-radius: 20px;
-  background-color: ${({ $isActive, theme }) =>
-    $isActive ? theme.colors.primary : theme.colors.background};
-  border-width: 1px;
-  border-color: ${({ $isActive, theme }) =>
-    $isActive ? theme.colors.primary : theme.colors.border};
-`
-
-export const ProfessionalButtonText = styled.Text<{ $isActive: boolean }>`
-  font-size: 14px;
-  font-family: ${({ $isActive, theme }) =>
-    $isActive ? theme.typography.fontFamily.semibold : theme.typography.fontFamily.regular};
-  color: ${({ $isActive, theme }) =>
-    $isActive ? theme.colors.text.white : theme.colors.text.primary};
+export const ProfessionalName = styled.Text`
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.typography.fontFamily.semibold};
+  color: ${({ theme }) => theme.colors.text.primary};
+  text-align: center;
+  margin: 8px 0;
 `
 
 export const CalendarContainer = styled.View`

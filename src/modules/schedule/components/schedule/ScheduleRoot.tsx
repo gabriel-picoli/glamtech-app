@@ -1,3 +1,5 @@
+import { ScheduleProvider } from '../../ScheduleContext'
+
 import { ScheduleRootProps } from '../../types'
 
 import { Container } from './styles'
@@ -7,7 +9,10 @@ import { Container } from './styles'
  *
  * Container principal
  */
-
 export function ScheduleRoot({ children }: ScheduleRootProps) {
-  return <Container>{children}</Container>
+  return (
+    <ScheduleProvider>
+      <Container>{children}</Container>
+    </ScheduleProvider>
+  )
 }

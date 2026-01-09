@@ -1,21 +1,32 @@
 import { ReactNode } from 'react'
 
+import { Mode } from 'react-native-big-calendar'
+
+import { Situation } from '@/domain/enums/Situation'
+
+import { Professional } from '@/domain/models/Professional'
+
 export type ScheduleRootProps = {
   children: ReactNode
 }
 
 export type ScheduleHeaderProps = {
-  children: ReactNode
+  children?: ReactNode
 }
 
 export type ScheduleState = {
   // estado
   selectedProfessionalId: number | null
   selectedDate: string
-  viewMode: 'day' | 'week' | '3days'
+  viewMode: Mode
+  professionals: Professional[]
+  currentProfessional: Professional | null
 
   // açoes de profissional
+  setProfessionals: (professionals: Professional[]) => void // <--- ESTA LINHA
   setSelectedProfessional: (id: number) => void
+  goToNextProfessional: () => void
+  goToPreviousProfessional: () => void
 
   // açoes de data
   setSelectedDate: (date: string) => void
@@ -48,5 +59,5 @@ export type CalendarEvent = {
 
 export type ProfessionalFilter = {
   hasSchedule: boolean
-  situation: 'ATIVO' | 'INATIVO'
+  situation: Situation
 }
