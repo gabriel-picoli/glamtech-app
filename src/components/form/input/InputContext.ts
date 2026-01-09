@@ -4,7 +4,6 @@ export type InputContextValue = {
   hasError: boolean
   isFocused: boolean
   setIsFocused: (focused: boolean) => void
-  setHasError: (error: boolean) => void
 }
 
 export const InputContext = createContext<InputContextValue | null>(null)
