@@ -102,13 +102,14 @@ export function ScheduleCalendar() {
             events={calendarEvents}
             renderHeader={() => null}
             date={toJSDate(selectedDate)}
+            swipeEnabled={false}
             height={600}
             mode={viewMode}
             locale="pt-BR"
             ampm={false}
             minHour={8}
             maxHour={22}
-            hourRowHeight={60}
+            hourRowHeight={40}
             renderEvent={(event: any) => (
               <View style={{ flex: 1, padding: 4, gap: 4 }}>
                 <StatusBadge $status={event.status}>

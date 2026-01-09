@@ -1,7 +1,5 @@
 import { useScheduleContext } from '@/modules/schedule/ScheduleContext'
 
-import { ScheduleHeaderProps } from '@/modules/schedule/types'
-
 import { formatISODateReadable } from '@/utils/date/format'
 
 import { Header, DateSelector, DateButton, DateText, ProfessionalName } from './styles'
@@ -11,7 +9,7 @@ import Icon from '@components/icon'
 /**
  * Header da agenda com navegação de data e nome do profissional
  */
-export function ScheduleHeader({ children }: ScheduleHeaderProps) {
+export function ScheduleHeader() {
   const { selectedDate, goToPreviousDay, goToNextDay, goToToday, currentProfessional } =
     useScheduleContext()
 
@@ -38,8 +36,6 @@ export function ScheduleHeader({ children }: ScheduleHeaderProps) {
       {currentProfessional && (
         <ProfessionalName>{currentProfessional.professionalName}</ProfessionalName>
       )}
-
-      {children}
     </Header>
   )
 }
