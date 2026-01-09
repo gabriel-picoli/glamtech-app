@@ -4,7 +4,7 @@ import { useInputContext } from './InputContext'
 
 import { InputFieldsProps } from './types'
 
-import { FieldWrapper } from '../_shared/FieldWrapper'
+import { FieldWrapper } from '../_shared/styles/FieldWrapper'
 import { TextInput } from './styles'
 
 import theme from '@styles/theme'
