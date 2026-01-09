@@ -1,10 +1,10 @@
 import { FieldValues, useController } from 'react-hook-form'
 
-import { InputErrorProps } from './types'
+import { SelectErrorProps } from './types'
 
-import { ErrorText } from '../_shared/styles/FieldText' 
+import { ErrorText } from '../_shared/styles/FieldText'
 
-export function InputError<T extends FieldValues>({ name, control }: InputErrorProps<T>) {
+export function SelectError<T extends FieldValues>({ name, control }: SelectErrorProps<T>) {
   const {
     fieldState: { error }
   } = useController({

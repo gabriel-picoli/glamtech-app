@@ -7,7 +7,6 @@ export default function Appointments() {
     <Screen>
       <Schedule.Root>
         <Schedule.Header>
-          <Schedule.Controls />
           <Schedule.DateSelector />
           <Schedule.ProfessionalSelector />
         </Schedule.Header>
