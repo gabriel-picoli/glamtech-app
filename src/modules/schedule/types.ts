@@ -10,10 +10,6 @@ export type ScheduleRootProps = {
   children: ReactNode
 }
 
-export type ScheduleHeaderProps = {
-  children: ReactNode
-}
-
 export type ScheduleState = {
   // estado
   selectedProfessionalId: number | null

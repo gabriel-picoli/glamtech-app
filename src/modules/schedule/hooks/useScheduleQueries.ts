@@ -142,7 +142,8 @@ export function useProfessionalsWithSchedule() {
  */
 export function useEventsByProfessional(professionalId: number | null, date: string) {
   return useQuery(
-    queryKeys.events.byProfessional(professionalId!, date),
+    queryKeys.events.byProfessional(professionalId ?? 0, date),
+
     async () => {
       // TODO: substituir por api real
       if (!professionalId) return []

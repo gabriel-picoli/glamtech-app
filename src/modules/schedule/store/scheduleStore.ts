@@ -6,7 +6,6 @@ import { getToday, goToNextDay, goToPreviousDay } from '@/utils/date/calc'
 
 /**
  * Estado da feature de Agenda.
- * Gerencia o profissional selecionado, data atual e modo de visualização.
  */
 export const useScheduleStore = create<ScheduleState>((set, get) => ({
   // estado inicial
