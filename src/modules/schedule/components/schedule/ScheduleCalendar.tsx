@@ -5,9 +5,11 @@ import { GestureDetector } from 'react-native-gesture-handler'
 import { useScheduleContext } from '../../ScheduleContext'
 
 import { useEventsByProfessional } from '@/modules/schedule/hooks/useScheduleQueries'
+
 import { useSwipeAnimation } from '@/modules/schedule/hooks/useSwipeAnimation'
 
 import { Event } from '@/domain/models/Event'
+
 import { toJSDate } from '@/utils/date/calc'
 
 import theme from '@styles/theme'

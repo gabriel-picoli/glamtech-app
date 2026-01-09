@@ -11,7 +11,7 @@ export type ScheduleRootProps = {
 }
 
 export type ScheduleHeaderProps = {
-  children?: ReactNode
+  children: ReactNode
 }
 
 export type ScheduleState = {

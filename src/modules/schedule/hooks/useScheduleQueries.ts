@@ -110,6 +110,7 @@ const mockEvents: Record<number, Event[]> = {
 
 /**
  * Hook para buscar profissionais com agenda ativa.
+
  * Popula automaticamente a store com os profissionais.
  */
 export function useProfessionalsWithSchedule() {
@@ -126,10 +127,9 @@ export function useProfessionalsWithSchedule() {
     }
   )
 
-  // Popula a store quando os dados são carregados
+  // popula a store quando os dados sao carregados
   useEffect(() => {
     if (query.data && query.data.length > 0) {
-      console.log('Carregando profissionais na store:', query.data)
       useScheduleStore.getState().setProfessionals(query.data)
     }
   }, [query.data])
@@ -149,9 +149,9 @@ export function useEventsByProfessional(professionalId: number | null, date: str
       return mockEvents[professionalId] || []
     },
     {
-      enabled: !!professionalId,
-      staleTime: 1000 * 60 * 2,
-      cacheTime: 1000 * 60 * 10
+      enabled: !!professionalId, // so executa se tiver profissional selecionado
+      staleTime: 1000 * 60 * 2, // 2 minutos
+      cacheTime: 1000 * 60 * 10 // 10 minutos
     }
   )
 }

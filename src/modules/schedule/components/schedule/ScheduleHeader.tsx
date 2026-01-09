@@ -1,3 +1,5 @@
+import { useScheduleContext } from '@/modules/schedule/ScheduleContext'
+
 import { ScheduleHeaderProps } from '@/modules/schedule/types'
 
 import { formatISODateReadable } from '@/utils/date/format'
@@ -5,7 +7,6 @@ import { formatISODateReadable } from '@/utils/date/format'
 import { Header, DateSelector, DateButton, DateText, ProfessionalName } from './styles'
 
 import Icon from '@components/icon'
-import { useScheduleContext } from '@/modules/schedule/ScheduleContext'
 
 /**
  * Header da agenda com navegação de data e nome do profissional

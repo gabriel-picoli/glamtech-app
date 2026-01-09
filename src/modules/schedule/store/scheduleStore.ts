@@ -3,7 +3,6 @@ import { create } from 'zustand'
 import { ScheduleState } from '../types'
 
 import { getToday, goToNextDay, goToPreviousDay } from '@/utils/date/calc'
-import { Professional } from '@/domain/models/Professional'
 
 /**
  * Estado da feature de Agenda.
