@@ -1,5 +1,5 @@
-// modules/schedule/hooks/useSwipeAnimation.ts
 import { useRef, useCallback, useEffect } from 'react'
+
 import { Animated } from 'react-native'
 import { Gesture } from 'react-native-gesture-handler'
 
