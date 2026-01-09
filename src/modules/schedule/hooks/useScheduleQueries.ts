@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useQuery } from 'react-query'
 
 import { queryKeys } from '@/lib/react-query/queryKeys'
@@ -9,6 +10,8 @@ import { Professional } from '@/domain/models/Professional'
 import { Event } from '@/domain/models/Event'
 
 import { getToday } from '@/utils/date/calc'
+
+import { useScheduleStore } from '../store/scheduleStore'
 
 const mockProfessionals: Professional[] = [
   {
@@ -107,41 +110,42 @@ const mockEvents: Record<number, Event[]> = {
 
 /**
  * Hook para buscar profissionais com agenda ativa.
- *
- * Retorna apenas profissionais que possuem agenda habilitada.
+
+ * Popula automaticamente a store com os profissionais.
  */
 export function useProfessionalsWithSchedule() {
-  return useQuery(
+  const query = useQuery(
     queryKeys.professionals.withSchedule(),
     async () => {
-      // TODO: Substituir por chamada real à API
-      // const response = await api.get('/professionals?hasSchedule=true')
-      // return response.data.map(mapProfessionalResponseToDomain)
-
-      return mockProfessionals.filter((p) => p.hasSchedule)
+      // TODO: substituir por api real
+      const result = mockProfessionals.filter((p) => p.hasSchedule)
+      return result
     },
     {
       staleTime: 1000 * 60 * 10, // 10 minutos
       cacheTime: 1000 * 60 * 30 // 30 minutos
     }
   )
+
+  // popula a store quando os dados sao carregados
+  useEffect(() => {
+    if (query.data && query.data.length > 0) {
+      useScheduleStore.getState().setProfessionals(query.data)
+    }
+  }, [query.data])
+
+  return query
 }
 
 /**
  * Hook para buscar eventos de um profissional em uma data específica.
- *
- * @param professionalId - ID do profissional
- *
- * @param date - data do evento
  */
 export function useEventsByProfessional(professionalId: number | null, date: string) {
   return useQuery(
     queryKeys.events.byProfessional(professionalId!, date),
     async () => {
-      // TODO: substituir por chamada a api
-
+      // TODO: substituir por api real
       if (!professionalId) return []
-
       return mockEvents[professionalId] || []
     },
     {

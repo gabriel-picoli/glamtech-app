@@ -6,10 +6,7 @@ export default function Appointments() {
   return (
     <Screen>
       <Schedule.Root>
-        <Schedule.Header>
-          <Schedule.DateSelector />
-          <Schedule.ProfessionalSelector />
-        </Schedule.Header>
+        <Schedule.Header />
         <Schedule.Calendar />
       </Schedule.Root>
     </Screen>
